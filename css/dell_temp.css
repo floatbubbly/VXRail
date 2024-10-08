@@ -1,0 +1,485 @@
+.Dell_Brand {
+	width: 100%;
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+	/*overflow: hidden;*/
+	display: flex;
+	align-content:space-between;
+}
+.Dell_Brand li {
+	width: 33.33%;
+	text-align: center;
+	padding: 20px 0;
+	float:left;
+	position: relative;
+}
+.Dell_Brand li:nth-child(2) {
+	width: 33.33%;
+	border:1px solid rgba(255,255,255,.3);
+	border-top:none;
+	border-bottom: none;
+}
+.Dell_Brand li a {
+	width: 100%;
+	float:left;
+	opacity: .5;
+}
+.Dell_Brand li a:hover , .Dell_Brand li a.Focus {
+	opacity: 1;
+}
+.Dell_Brand li.G_tech {
+	border-bottom:4px solid #D36002;
+}
+.Dell_Brand li.G_tech img {
+	height: 40px;
+	margin-bottom: -5px;
+}
+.Dell_Brand li.G_emc {
+	border-bottom:4px solid #9E9E9E;
+}
+.Dell_Brand li.G_emc img {
+	height: 40px;
+}
+.Dell_Brand li.G_circle {
+	border-bottom:4px solid #0080C9;
+}
+.Dell_Brand li.G_circle img {
+	height: 50px;
+	margin-top: -5px;
+}
+.Dell_Brand li ul.SubNav {
+	position: absolute;
+	width: 100%;
+	top:100%;
+	list-style-type: none;
+	z-index: 99;
+	display: none;
+	padding:0;
+	margin: 0;
+}
+.Dell_Brand li ul.SubNav li , .Dell_Brand li:nth-child(2) ul li {
+	background: rgba(255,255,255,.2);
+	margin:0 0 3px 0;
+	width: 100%;
+	float:left;
+	border:none;
+	padding: 0;
+}
+.Dell_Brand li ul.SubNav li a {
+	color:#fff;
+	text-align: left;
+	padding: 0 30px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	opacity: 1;
+}
+.Dell_Brand li.G_tech:hover ul.SubNav {
+	display: block;
+}
+/************fbBox************************/
+.fbBox {
+	width: 370px;
+	height: 400px;
+	position: fixed;
+	align-items:flex-end;
+	z-index: 10;
+	bottom:80px;
+}
+.FBAPI {
+	width: 300px;
+	height: 400px;
+	float:right;
+}
+.fbOpen {
+	right: 0;
+	transition:all 0.3s;
+}
+.fbClose {
+	right: -300px;
+	transition:all 0.3s;
+}
+.Button_fb {
+	width: 70px;
+	height: 70px;
+	background: url(../images/button_fb.jpg) no-repeat 0 0;
+	float:left;
+	position: absolute;
+	bottom: 0;
+}
+/*********** Button_faq ******************/
+.Button_faq {
+	background: #005475;
+	padding: 10px 20px;
+	position: fixed;
+	right: 0%;
+	bottom:10px;
+	z-index: 999;
+	font-size: 1.5rem;
+	color:#fff;
+}
+.Button_faq:hover , .Button_faq:active {
+	text-decoration: none;
+	color:#fff;
+}
+.Button_ITHOME {
+	background: #005475;
+	padding: 10px 20px;
+	position: fixed;
+	right: 0%;
+	bottom:80px;
+	z-index: 999;
+	font-size: 1.5rem;
+	color:#fff;
+}
+.Button_ITHOME:hover {
+	text-decoration: none;
+	color:#8ed0ea;
+}
+/********************************************************
+RWD Youtube
+********************************************************/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+/*#section1 .video-container {
+	padding-bottom: 33.15%;
+}*/
+#section1 .video-container {
+	padding-bottom: 42.15%;
+}
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.scrollable-element::-webkit-scrollbar-track {
+	border-radius: 3px;
+	overflow: hidden;
+}
+.scrollable-element::-webkit-scrollbar {
+	width: 5px;
+	background-color: rgba(255,255,255,.1);
+	border-radius: 3px;
+	overflow: hidden;
+}
+.scrollable-element::-webkit-scrollbar-thumb {
+	background-color: rgba(255,255,255,.2);
+	border-radius: 3px;
+	overflow: hidden;
+}
+/**** lightbox *****/
+.short-animate {
+  -webkit-transition:.5s ease-in-out;
+  -moz-transition:.5s ease-in-out;
+  -ms-transition:.5s ease-in-out;
+  -o-transition:.5s ease-in-out;
+  transition:.5s ease-in-out;
+}
+.long-animate {
+  -webkit-transition: .5s .5s ease-in-out;
+  -moz-transition: .5s .5s ease-in-out;
+  -ms-transition: .5s .5s ease-in-out;
+  -o-transition:.5s .5s ease-in-out;
+  transition:.5s .5s ease-in-out;
+}
+.close-lightbox {
+  display:block;
+  position:absolute;
+  overflow:hidden;
+  height:50px;
+  width:50px;
+  text-indent:-5000px;
+  right:10px;
+  top:10px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+#close-panel {
+	position: fixed;
+	right: -1px;
+	top:0;
+	width: 50px;
+	height: 50px;
+	background: #444;
+	color:#fff;
+	text-align: center;
+	font-size: 30px;
+	line-height: 40px;
+	text-decoration: none;
+}
+.LightBoxInside {
+	width: 80%;
+	margin:0 auto;
+	box-sizing:border-box;
+	text-align: center;
+	background: #fff;
+	border-radius: 3px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-size: 18px;
+	color:#505050;
+	max-height: 80vh;
+	height: auto;
+	text-shadow:none;
+}
+#lightbox-panel .scrollable-element {
+	width: 100%;
+	overflow-y: scroll;
+}
+.LightBoxInside::-webkit-scrollbar-track {
+	border-radius: 3px;
+	overflow: hidden;
+}
+.LightBoxInside::-webkit-scrollbar {
+	width: 10px;
+	background-color: rgba(255,255,255,.3);
+	border-radius: 3px;
+	overflow: hidden;
+}
+.LightBoxInside::-webkit-scrollbar-thumb {
+	background-color: #ffb56e;
+	border-radius: 3px;
+	overflow: hidden;
+}
+#lightbox {
+  display:none;
+  background: rgba(0,0,0,0.8);
+  position:absolute;
+  top:0px;
+  left:0px;
+  min-width:100%;
+  min-height:100%;
+  z-index:1000;
+}
+#lightbox-panel {
+  display:none;
+  z-index:1001;
+  background: rgba(0,0,0,.8);
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left:0;
+	height: 100vh;
+	width: 100vw;
+}
+/****************** LightBoxInside info *****************/
+iframe {
+	border:none;
+}
+.LightBoxInside h1 {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	color:#fff;
+	background: #444;
+	padding: 5px 10px;
+	font-size: 1.5rem;
+	line-height: 50px;
+	text-align: left;
+	margin: 0;
+}
+.FAQSection {
+	display: block;
+}
+.Fill_Form {
+	text-align: left;
+	font-size: 15px;
+}
+.mg-top-10 {
+    margin-top: 10px;
+}
+.form-control {
+	font-size: 15px;
+}
+.custom-select {
+	font-size: 15px;
+	width: 100%;
+}
+.Fill_Form .Text_Win {
+	color:#42b8c1;
+	display: block;
+	text-align: center;
+	margin: 0 0 20px 0;
+	font-size: 18px;
+}
+/****************** footer *****************/
+footer {
+	background: #000;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px 0;
+	width: 100%;
+	float:left;
+}
+footer .footerInfo {
+	width: 100%;
+	color:#fff;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+}
+footer .footerInfo .footer_Button_fb {
+	float:right;
+    margin:0 20px 50px 0;
+}
+footer .footerInfo .Phone {
+	font-size: 16px;
+  	padding:5px 0 0 80px;
+  	float:left;
+  	margin:20px 0 20px 0px;
+  	white-space:nowrap;
+  	text-align: left;
+  	background: url(../images/icon_phone.png) no-repeat left center;
+}
+footer .footerInfo .Phone p {
+	display: block;
+	text-align: left;
+}
+footer .footerInfo .Phone p:first-child {
+	margin: 0 0 5px 0;
+}
+footer .footerInfo .Phone a {
+	color:#fff;
+	text-decoration: none;
+}
+footer .copyright {
+	box-sizing:border-box;
+	padding:0px;
+	font-size: 14px;
+	text-align: justify;
+	margin: 0 auto;
+	width: 100%;
+	float:left;
+	max-width: 1300px;
+	width: 100%;
+	color:#fff;
+}
+/*svg logos */
+.Logos {
+	width: 800px;
+	margin: 150px auto 150px auto;
+	text-align: center;
+}
+.Logos .logo-list {
+	padding: 0;
+	margin: 0;
+}
+.Logos .logo-list li {
+    margin-left: 2.2%;
+    margin-right: 2.2%;
+    list-style-type: none; 
+    display: inline-block;
+}
+.Logos img {
+    height: 48px;
+    width: auto;
+}
+.Logos img.svg_secureworks {
+	height: 13px;
+}
+.Logos svg {
+    fill: #fff;
+    height: 48px;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+	.Dell_Brand li.G_tech img {
+		height: 30px;
+		margin-bottom: -5px;
+	}
+	.Dell_Brand li.G_emc img {
+		height: 30px;
+	}
+	.Dell_Brand li.G_circle img {
+		height: 40px;
+		margin-top: -5px;
+	}
+	.Dell_Brand li ul.SubNav {
+		position: absolute;
+		left:0;
+	}
+}
+@media screen and (max-width: 800px) {
+	.Dell_Brand li.G_tech img {
+		height: 20px;
+		margin-bottom: -5px;
+	}
+	.Dell_Brand li.G_emc img {
+		height: 20px;
+	}
+	.Dell_Brand li.G_circle img {
+		height: 30px;
+		margin-top: -5px;
+	}
+	.Logos {
+		width: 100%;
+	}
+	.Dell_Brand li ul.SubNav {
+		position: absolute;
+		left:0;
+		width: 300%;
+	}	
+}
+
+
+@media screen and (max-width: 640px) {
+	.fbBox {
+		width: 340px;
+    	bottom: 60px;
+	}
+	.Button_fb {
+		width: 40px;
+		height: 40px;
+		background-size: cover;
+	}
+	.Button_faq {
+		font-size: 1rem;
+		background-size: cover;
+	}
+	.Button_ITHOME {
+		font-size: 1rem;
+		bottom:60px;
+	}
+	
+}
+@media screen and (max-width: 480px) {
+	footer {
+		padding: 20px 0;
+		height: auto;
+		display: block;
+	}
+	.Dell_Brand li.G_tech img {
+		height: 10px;
+		margin-bottom: -5px;
+	}
+	.Dell_Brand li.G_emc img {
+		height: 10px;
+	}
+	.Dell_Brand li.G_circle img {
+		height: 20px;
+		margin-top: -5px;
+	}
+	footer .footerInfo .Phone {
+		font-size: 12px;
+	}
+	footer .copyright {
+		font-size: 12px;
+	}
+}

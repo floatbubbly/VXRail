@@ -1,0 +1,226 @@
+/*header + mani-menu start */
+header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+header .logo {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+header .logo h1 {
+  font-weight: normal;
+  position: relative;
+}
+header .logo h1 a {
+}
+header .menu {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 15px;
+}
+header .menu .main-menu {
+  margin: 0;
+  width: auto;
+  height: 100%;
+  display: inline;
+  float: left;
+}
+header .menu .main-menu li {
+  float: left;
+  display: inline;
+  height: 100%;
+  position: relative;
+  letter-spacing: 0em;
+}
+header .menu .main-menu li:after {
+  content: '';
+  width: 1px;
+  background: #808080;
+  height: 16px;
+  right: 0;
+  top:27px;
+  position: absolute;
+}
+header .menu .main-menu li:last-child:after {
+  display: none;
+}
+header .menu .main-menu li a {
+  display: block;
+  font-size: 18px;
+  padding: 0 15px;
+  height: 100%;
+  line-height: 70px;
+  /*text-transform: uppercase;*/
+  transition: 0.1s ease;
+  color:#808080;
+}
+header .menu .main-menu li a:hover {
+  color:#fff;
+}
+header .menu .main-menu li a.Focus {
+  color:#FFC320;
+}
+header .menu .menu-toggle {
+  display: none;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+header .menu .menu-toggle span {
+  position: absolute;
+  display: block;
+  height: 2px;
+  border-radius: 5px;
+  background: #3DB7FF;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+header .menu .menu-toggle span:nth-child(1) {
+  top: 35%;
+}
+header .menu .menu-toggle span:nth-child(3) {
+  top: 65%;
+}
+header .menu .menu-toggle.active {
+  background: #000;
+}
+header .menu .menu-toggle.active span:nth-child(1) {
+  background:  #3DB7FF;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+header .menu .menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+header .menu .menu-toggle.active span:nth-child(3) {
+  background:  #3DB7FF;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+header .menu .main-menu li a i {
+  padding: 0 0 0 10px;
+}
+header .social-menu {
+  width: auto;
+  display: block;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+header .social-menu li {
+  display: inline;
+  margin: 0 5px;
+}
+header .social-menu li a i {
+  font-size: 30px;
+}
+.shrink {
+  height: 60px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
+}
+.shrink .menu .main-menu li a {
+  font-size: 14px;
+  line-height: 60px;
+  transition: 0.2s ease;
+  /*color: #ff8eb0;*/
+}
+.shrink .social-menu li a i {
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1300px) {
+  header .menu .main-menu li a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1140px) {
+  header .social-menu {
+    display: none;
+  }
+  header .logo {
+    width: 150px;
+  }
+}
+@media (max-width: 980px) {
+  header .menu {
+    transition: all 0.2s linear;
+  }
+  header .menu .main-menu {
+    margin: 0;
+    padding-left: 0;
+    width: 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    display: block;
+    background: #ffffff;
+    transition: all 0.2s linear;
+  }
+  header .menu .main-menu li {
+    width: 100%;
+    background: #000;
+  }
+  header .menu .main-menu li a {
+    width: 100%;
+    color:#fff;
+    text-align: center;
+    border-bottom:1px solid #333;
+  }
+  header .menu .main-menu li:after {
+    display: none;
+  }
+  header .menu .menu-active {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+  header .menu .menu-toggle {
+    display: block;
+  }
+
+  .shrink .menu .main-menu {
+    top: 60px;
+  }
+  .shrink .menu .menu-toggle {
+    width: 60px;
+    height: 60px;
+    display: block;
+  }
+  header .menu .main-menu li a i {
+    display: none;
+  }
+
+}
